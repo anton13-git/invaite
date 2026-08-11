@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Свидание</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+ <!-- Экран 1: приглашение -->
+<div id="screen1" class="screen active">
+  <div class="firework-container left">
+    <span class="spark s1"></span>
+    <span class="spark s2"></span>
+    <span class="spark s3"></span>
+    <span class="spark s4"></span>
+    <span class="spark s5"></span>
+    <span class="spark s6"></span>
+    <span class="spark s7"></span>
+    <span class="spark s8"></span>
+    <span class="spark s9"></span>
+    <span class="spark s10"></span>
+    <span class="spark s11"></span>
+    <span class="spark s12"></span>
+  </div>
+  <div class="firework-container right">
+    <span class="spark s1"></span>
+    <span class="spark s2"></span>
+    <span class="spark s3"></span>
+    <span class="spark s4"></span>
+    <span class="spark s5"></span>
+    <span class="spark s6"></span>
+    <span class="spark s7"></span>
+    <span class="spark s8"></span>
+    <span class="spark s9"></span>
+    <span class="spark s10"></span>
+    <span class="spark s11"></span>
+    <span class="spark s12"></span>
+  </div>
+  <div class="hearts">❤️❤️</div>
+  <h1>My love</h1>
+  <img src="photo.jpg" alt="фото" class="photo">
+  <p>🌹🌹"Will you go out with me?"  🌹🌹</p>
+  <p class="subtitle"></p>I promise it will be interesting.💐</p>
+  <button class="btn-yes" onclick="showScreen('screen2')">YEs,of couse!</button>
+  <button id="btn-no" class="btn-no">Yes 💕</button>
+</div>
+  <!-- Экран 2 появится позже -->
+<div id="screen2" class="screen">
+  <h2> "What would you like to do on our date?" 💃🤵‍♂️</h2>
+  <div class="food-grid">
+    <button class="food-card" onclick="selectPlan('Pizza 🍕')">🍕<br>Pizza</button>
+    <button class="food-card" onclick="selectPlan('Pasta 🍝')">🍝<br>Pasta</button>
+    <button class="food-card" onclick="selectPlan('Cinema 🎬')">🎬<br>Cinema</button>
+    <button class="food-card" onclick="selectPlan('PUB English 🍺')">🍺<br>PUB English</button>
+  </div>
+</div>
+<div id="screen3" class="screen">
+  <h2>When are you free? 📅</h2>
+  <label>Choose a date:</label>
+  <input type="date" id="dateInput">
+
+  <label>Choose a time:</label>
+  <div class="time-options">
+    <button class="time-card" onclick="selectTime(this, '17:00')">🌇 17:00</button>
+    <button class="time-card" onclick="selectTime(this, '18:00')">🌆 18:00</button>
+    <button class="time-card" onclick="selectTime(this, '19:00')">🌙 19:00</button>
+  </div>
+
+  <button class="btn-yes" onclick="goNext()">Done! →</button>
+</div>
+<div id="screen4" class="screen">
+  <div class="hearts">❤️💕💖💕❤️</div>
+  <h2>Yay! 🎉</h2>
+  <p>Thanks for agreeing! Wait for confirmation from me. 💌</p>
+  <div class="hearts">❤️💕💖💕❤️</div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
